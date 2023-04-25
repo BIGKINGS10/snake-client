@@ -1,5 +1,5 @@
+const net = require('net');
 const { IP, PORT } = require("./constants");
-
 const connect = function () {
     const conn = net.createConnection({
       host: IP,
@@ -27,4 +27,6 @@ const connect = function () {
     return conn;
   };
 
-  module.exports = connect
+  module.exports = {
+    connect
+  }
